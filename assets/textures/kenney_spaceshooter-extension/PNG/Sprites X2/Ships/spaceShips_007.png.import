@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/spaceShips_007.png-2f5748a7cf0ed56b5426663d09918130.stex"
+
+[deps]
+
+source_file="res://assets/textures/kenney_spaceshooter-extension/PNG/Sprites X2/Ships/spaceShips_007.png"
+source_md5="5e0ff63d12a85f9c47fa558f3f92ff26"
+
+dest_files=[ "res://.import/spaceShips_007.png-2f5748a7cf0ed56b5426663d09918130.stex" ]
+dest_md5="813c2aab5950792d15d0c017973e38fe"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

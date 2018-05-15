@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/spaceAstronauts_016.png-24a5860759e7c62c88482782ca0036df.stex"
+
+[deps]
+
+source_file="res://assets/textures/kenney_spaceshooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_016.png"
+source_md5="6301cb0f40164e41f7479759fb941a58"
+
+dest_files=[ "res://.import/spaceAstronauts_016.png-24a5860759e7c62c88482782ca0036df.stex" ]
+dest_md5="e482ae1e3635634b2ef0cbde53274828"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

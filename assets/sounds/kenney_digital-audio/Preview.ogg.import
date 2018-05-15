@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Preview.ogg-447bc94a280ea850e4916bd615cb4731.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/kenney_digital-audio/Preview.ogg"
+source_md5="db4a0792b138bf3362c323fb48eef015"
+
+dest_files=[ "res://.import/Preview.ogg-447bc94a280ea850e4916bd615cb4731.oggstr" ]
+dest_md5="f6c1f2bbbb579af64ba69f5a82b70438"
+
+[params]
+
+loop=true
+loop_offset=0

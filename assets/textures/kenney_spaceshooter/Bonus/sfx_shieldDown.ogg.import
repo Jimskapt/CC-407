@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_shieldDown.ogg-a1b6f551a9d237aab20111e7ea0351da.oggstr"
+
+[deps]
+
+source_file="res://assets/textures/kenney_spaceshooter/Bonus/sfx_shieldDown.ogg"
+source_md5="c49980002bd7d986409301bcf4d06c11"
+
+dest_files=[ "res://.import/sfx_shieldDown.ogg-a1b6f551a9d237aab20111e7ea0351da.oggstr" ]
+dest_md5="d2ed9f6ba6c04ec9ef58a523acb05bca"
+
+[params]
+
+loop=true
+loop_offset=0

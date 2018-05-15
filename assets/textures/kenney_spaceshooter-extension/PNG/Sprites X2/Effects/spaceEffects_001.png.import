@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/spaceEffects_001.png-afec88fb35cd88781b4b362c1844540a.stex"
+
+[deps]
+
+source_file="res://assets/textures/kenney_spaceshooter-extension/PNG/Sprites X2/Effects/spaceEffects_001.png"
+source_md5="3393e3545158ab260ec25bffcd019a50"
+
+dest_files=[ "res://.import/spaceEffects_001.png-afec88fb35cd88781b4b362c1844540a.stex" ]
+dest_md5="5768d5a01329638f0edf6a19070ee4a3"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

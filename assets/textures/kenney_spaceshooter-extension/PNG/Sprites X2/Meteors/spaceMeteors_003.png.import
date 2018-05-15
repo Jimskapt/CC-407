@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/spaceMeteors_003.png-fb66aa4965a22f72180e4504f5fe5665.stex"
+
+[deps]
+
+source_file="res://assets/textures/kenney_spaceshooter-extension/PNG/Sprites X2/Meteors/spaceMeteors_003.png"
+source_md5="5d628c1d7f0da1a4fb7da924a321a863"
+
+dest_files=[ "res://.import/spaceMeteors_003.png-fb66aa4965a22f72180e4504f5fe5665.stex" ]
+dest_md5="afbb160e571b69ab4c3d6d950c43383d"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

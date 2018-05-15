@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/spaceRocketParts_011.png-8ee057f606dfae0431d7ff51ff551b22.stex"
+
+[deps]
+
+source_file="res://assets/textures/kenney_spaceshooter-extension/PNG/Sprites X2/Rocket parts/spaceRocketParts_011.png"
+source_md5="88386746d8fe8324f96c14c5696d23ac"
+
+dest_files=[ "res://.import/spaceRocketParts_011.png-8ee057f606dfae0431d7ff51ff551b22.stex" ]
+dest_md5="ee447532ec7840fa7f7e543a66f11a14"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

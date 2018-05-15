@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/spaceStation_012.png-94199a3a42e6e40f87c0a8f9686ec711.stex"
+
+[deps]
+
+source_file="res://assets/textures/kenney_spaceshooter-extension/PNG/Sprites X2/Station/spaceStation_012.png"
+source_md5="d528cc06ca91eb4d14ffa9200dc62327"
+
+dest_files=[ "res://.import/spaceStation_012.png-94199a3a42e6e40f87c0a8f9686ec711.stex" ]
+dest_md5="1dde86b2205a807c95fe89f902ea513a"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

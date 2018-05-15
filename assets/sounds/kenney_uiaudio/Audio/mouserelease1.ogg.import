@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mouserelease1.ogg-676cde15efaf6d1e8f172e876dbf0a2e.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/kenney_uiaudio/Audio/mouserelease1.ogg"
+source_md5="15e639476732f94884e5501ed542462f"
+
+dest_files=[ "res://.import/mouserelease1.ogg-676cde15efaf6d1e8f172e876dbf0a2e.oggstr" ]
+dest_md5="7d258b3dd1aa1c4c94c9e0541d42fba8"
+
+[params]
+
+loop=true
+loop_offset=0

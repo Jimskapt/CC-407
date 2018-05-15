@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/laser6.ogg-69bfa7a650194509a6f9f2031ca5ab92.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/kenney_digital-audio/Audio/laser6.ogg"
+source_md5="8bde550e08d23bfe55b80f8097624a55"
+
+dest_files=[ "res://.import/laser6.ogg-69bfa7a650194509a6f9f2031ca5ab92.oggstr" ]
+dest_md5="d9ddb760eb47b48aa3577e93f6770805"
+
+[params]
+
+loop=true
+loop_offset=0

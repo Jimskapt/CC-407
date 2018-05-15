@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/powerUp2.ogg-d9cf40aa0697602ed8b27369bde17fda.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/kenney_digital-audio/Audio/powerUp2.ogg"
+source_md5="d155c407d48937ff851b7d13583c347c"
+
+dest_files=[ "res://.import/powerUp2.ogg-d9cf40aa0697602ed8b27369bde17fda.oggstr" ]
+dest_md5="9b1bb6abd0a1b0589acb6aef6240153c"
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/spaceBuilding_024.png-d4ceb071159bece38d3b47fcd369a769.stex"
+
+[deps]
+
+source_file="res://assets/textures/kenney_spaceshooter-extension/PNG/Sprites X2/Building/spaceBuilding_024.png"
+source_md5="2e3edfe76edd680ed66d77965f095b0b"
+
+dest_files=[ "res://.import/spaceBuilding_024.png-d4ceb071159bece38d3b47fcd369a769.stex" ]
+dest_md5="1a108e998566b218d057707991b1bfab"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

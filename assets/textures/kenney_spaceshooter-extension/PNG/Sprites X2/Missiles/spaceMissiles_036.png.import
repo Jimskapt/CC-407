@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/spaceMissiles_036.png-7fab380ee703ef6f0f8d262305e9caa3.stex"
+
+[deps]
+
+source_file="res://assets/textures/kenney_spaceshooter-extension/PNG/Sprites X2/Missiles/spaceMissiles_036.png"
+source_md5="434d35a823fdc7482bd1559c787221d3"
+
+dest_files=[ "res://.import/spaceMissiles_036.png-7fab380ee703ef6f0f8d262305e9caa3.stex" ]
+dest_md5="9d63ac523774152c1e873a9ba5ced283"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

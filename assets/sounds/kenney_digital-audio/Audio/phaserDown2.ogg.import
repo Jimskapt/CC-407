@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/phaserDown2.ogg-51912486f9261cdfa93ecc178c57c105.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/kenney_digital-audio/Audio/phaserDown2.ogg"
+source_md5="57a71c432279d533d262c73c31f5296d"
+
+dest_files=[ "res://.import/phaserDown2.ogg-51912486f9261cdfa93ecc178c57c105.oggstr" ]
+dest_md5="4abcdbb6077552f7c1722c9bf4ed70f5"
+
+[params]
+
+loop=true
+loop_offset=0
