@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/female_leg.png-6309fe706be4226ec4469c13bb5154f7.stex"
+
+[deps]
+
+source_file="res://assets/textures/kenney_voxel-pack/PNG/Characters/Player female/female_leg.png"
+source_md5="c445db7ad8f3aa767c072d5afa737bf7"
+
+dest_files=[ "res://.import/female_leg.png-6309fe706be4226ec4469c13bb5154f7.stex" ]
+dest_md5="3b752c351ec867187f57fc6c344fc2ed"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

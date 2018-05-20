@@ -21,6 +21,6 @@ func _input(event):
 func refresh_current_tool():
 	for i in range(0, 10):
 		if (i == selected_tool):
-			get_node('tool' + str(i)).set_texture(selected_tool_texture)
+			get_node(str(i) + '/background').set_texture(selected_tool_texture)
 		else:
-			get_node('tool' + str(i)).set_texture(unselected_tool_texture)
+			get_node(str(i) + '/background').set_texture(unselected_tool_texture)

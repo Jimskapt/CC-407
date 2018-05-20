@@ -72,18 +72,13 @@ func _process(delta):
 	
 	var collision = get_node('../world/player').move_and_collide(way)
 	if collision:
+		var damage = way.length() * get_node('../world/player').get_mass() / 150.0
+		if (damage >= 2.0):
+			get_node('../world/player').life -= damage * 4
 		way = way.slide(collision.normal)
 		moment = 0
 	else:
 		get_node('../world/player').rotation_degrees = get_node('../world/player').rotation_degrees + moment * delta
 	
-	"""
-	offset = offset + way
-	rotation_degrees = rotation_degrees + moment * delta
-	"""
-	offset = get_node('../world/player').global_position - Vector2(1025/2, 600/2)
-	rotation_degrees = get_node('../world/player').rotation_degrees
-	"""
-	rotate(deg2rad(moment * delta))
-	translate(way)
-	"""
+	self.offset = get_node('../world/player').global_position - Vector2(1025/2, 600/2)
+	self.rotation_degrees = get_node('../world/player').rotation_degrees

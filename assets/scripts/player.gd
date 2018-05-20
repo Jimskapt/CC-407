@@ -1,7 +1,14 @@
 extends KinematicBody2D
 
+var life = 100
+var ore = 0
+var last_dig = 0
+
 func _ready():
 	set_process(true)
+
+func get_mass():
+	return 150 + self.ore
 
 func _process(delta):
 	
@@ -13,6 +20,18 @@ func _process(delta):
 		'top_right': false,
 		'top_left': false
 	}
+	
+	if (Input.is_action_pressed('shoot_right')):
+		var space_state = get_world_2d().direct_space_state
+		var see = Vector2(cos(self.rotation - PI / 2), sin(self.rotation - PI / 2))
+		get_node('../raycast').set_point_position(0, self.position)
+		get_node('../raycast').set_point_position(1, self.position + see * 35)
+		var cast = space_state.intersect_ray(self.position, self.position + see * 35)
+		if (cast):
+			if (OS.get_ticks_msec() - self.last_dig > 1000):
+				self.get_node('right_tool/rotate_anim').play('rotate_anim')
+				self.ore += 1
+				self.last_dig = OS.get_ticks_msec()
 	
 	if (Input.is_action_pressed('ui_right') && !Input.is_action_pressed('ui_left')):
 		pushers.left = true
