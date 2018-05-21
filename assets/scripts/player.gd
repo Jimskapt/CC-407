@@ -1,8 +1,10 @@
 extends KinematicBody2D
 
 var life = 100
+var max_life = 100
 var ore = 0
 var last_dig = 0
+var money = 0
 
 func _ready():
 	set_process(true)
@@ -28,10 +30,14 @@ func _process(delta):
 		get_node('../raycast').set_point_position(1, self.position + see * 35)
 		var cast = space_state.intersect_ray(self.position, self.position + see * 35)
 		if (cast):
-			if (OS.get_ticks_msec() - self.last_dig > 1000):
-				self.get_node('right_tool/rotate_anim').play('rotate_anim')
-				self.ore += 1
-				self.last_dig = OS.get_ticks_msec()
+			if (cast.collider.type == 'meteor'):
+				if (OS.get_ticks_msec() - self.last_dig > 1000):
+					self.get_node('right_tool/rotate_anim').play('rotate_anim')
+					self.ore += 1
+					self.last_dig = OS.get_ticks_msec()
+					get_node('../../topcamera').way += Vector2(cos(self.rotation + PI / 2), sin(self.rotation + PI / 2)) * 0.5
+			elif (cast.collider.type == 'trading_crate'):
+				get_node('../../UI/trading_panel').show()
 	
 	if (Input.is_action_pressed('ui_right') && !Input.is_action_pressed('ui_left')):
 		pushers.left = true
@@ -48,12 +54,12 @@ func _process(delta):
 		pushers.top_left = true
 	
 	if (Input.is_action_pressed('ui_roll_to_right') && !Input.is_action_pressed('ui_roll_to_left')):
-		pushers.down_right = true
-		pushers.top_left = true
-	
-	if (Input.is_action_pressed('ui_roll_to_left') && !Input.is_action_pressed('ui_roll_to_right')):
 		pushers.top_right = true
 		pushers.down_left = true
+	
+	if (Input.is_action_pressed('ui_roll_to_left') && !Input.is_action_pressed('ui_roll_to_right')):
+		pushers.down_right = true
+		pushers.top_left = true
 	
 	if (pushers.left):
 		get_node('left_push').show()

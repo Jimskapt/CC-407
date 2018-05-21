@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://assets/scripts/playground.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/topcamera.gd" type="Script" id=2]
@@ -10,29 +10,38 @@
 [ext_resource path="res://assets/textures/kenney_spaceshooter-extension/PNG/Sprites/Astronauts/spaceAstronauts_017.png" type="Texture" id=8]
 [ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/Effects/speed.png" type="Texture" id=9]
 [ext_resource path="res://assets/textures/kenney_generic-asset/PNG/Colored/genericItem_color_021.png" type="Texture" id=10]
-[ext_resource path="res://assets/scripts/toolbar.gd" type="Script" id=11]
-[ext_resource path="res://assets/textures/kenney_uipack-space/PNG/metalPanel_red.png" type="Texture" id=12]
-[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral0.png" type="Texture" id=13]
-[ext_resource path="res://assets/textures/kenney_uipack-space/PNG/metalPanel.png" type="Texture" id=14]
-[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral1.png" type="Texture" id=15]
-[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral2.png" type="Texture" id=16]
-[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral3.png" type="Texture" id=17]
-[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral4.png" type="Texture" id=18]
-[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral5.png" type="Texture" id=19]
-[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral6.png" type="Texture" id=20]
-[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral7.png" type="Texture" id=21]
-[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral8.png" type="Texture" id=22]
-[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral9.png" type="Texture" id=23]
-[ext_resource path="res://assets/scripts/life_display.gd" type="Script" id=24]
-[ext_resource path="res://assets/fonts/kenney_fonts/Fonts/Kenney Mini.ttf" type="DynamicFontData" id=25]
-[ext_resource path="res://assets/scripts/mass_display.gd" type="Script" id=26]
+[ext_resource path="res://assets/scripts/trading_crate.gd" type="Script" id=11]
+[ext_resource path="res://assets/textures/kenney_spaceshooter-extension/PNG/Sprites/Building/spaceBuilding_001.png" type="Texture" id=12]
+[ext_resource path="res://assets/scripts/toolbar.gd" type="Script" id=13]
+[ext_resource path="res://assets/textures/kenney_uipack-space/PNG/metalPanel_red.png" type="Texture" id=14]
+[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral0.png" type="Texture" id=15]
+[ext_resource path="res://assets/textures/kenney_uipack-space/PNG/metalPanel.png" type="Texture" id=16]
+[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral1.png" type="Texture" id=17]
+[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral2.png" type="Texture" id=18]
+[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral3.png" type="Texture" id=19]
+[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral4.png" type="Texture" id=20]
+[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral5.png" type="Texture" id=21]
+[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral6.png" type="Texture" id=22]
+[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral7.png" type="Texture" id=23]
+[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral8.png" type="Texture" id=24]
+[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/UI/numeral9.png" type="Texture" id=25]
+[ext_resource path="res://assets/scripts/life_display.gd" type="Script" id=26]
+[ext_resource path="res://assets/fonts/kenney_fonts/Fonts/Kenney Mini.ttf" type="DynamicFontData" id=27]
+[ext_resource path="res://assets/scripts/mass_display.gd" type="Script" id=28]
+[ext_resource path="res://assets/scripts/money_display.gd" type="Script" id=29]
+[ext_resource path="res://assets/fonts/kenney_fonts/Fonts/Kenney Blocks.ttf" type="DynamicFontData" id=30]
+[ext_resource path="res://assets/scripts/close_trade.gd" type="Script" id=31]
+[ext_resource path="res://assets/scripts/ore_sell.gd" type="Script" id=32]
+[ext_resource path="res://assets/scripts/hp_buy.gd" type="Script" id=33]
+[ext_resource path="res://assets/scripts/inertial_stabilizer_buy.gd" type="Script" id=34]
+[ext_resource path="res://assets/scripts/drill_buy.gd" type="Script" id=35]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 23.0805
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=2]
 
 resource_name = "rotate_anim"
 length = 1.0
@@ -63,24 +72,37 @@ tracks/1/keys = {
 "values": [ Vector2( 14.8356, -22.873 ), Vector2( 18.2635, -21.2094 ), Vector2( 14.8356, -22.873 ), Vector2( 10.6191, -23.4001 ), Vector2( 14.8356, -22.873 ) ]
 }
 
-[sub_resource type="DynamicFontData" id=2]
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="DynamicFontData" id=4]
 
 font_path = "res://assets/fonts/kenney_fonts/Fonts/Kenney Pixel Square.ttf"
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 
 size = 14
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 2 )
+font_data = SubResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 
 size = 16
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 25 )
+font_data = ExtResource( 27 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 30 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="playground" type="Node2D" index="0"]
@@ -142,6 +164,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="meteor1_0" type="KinematicBody2D" parent="world/meteors" index="0"]
 
+editor/display_folded = true
 position = Vector2( 188.31, -172.978 )
 input_pickable = false
 collision_layer = 1
@@ -186,6 +209,7 @@ max_lines_visible = -1
 
 [node name="meteor2_0" type="KinematicBody2D" parent="world/meteors" index="1"]
 
+editor/display_folded = true
 position = Vector2( 214.444, 168.373 )
 input_pickable = false
 collision_layer = 1
@@ -230,6 +254,7 @@ max_lines_visible = -1
 
 [node name="meteor3_0" type="KinematicBody2D" parent="world/meteors" index="2"]
 
+editor/display_folded = true
 position = Vector2( -356.047, 54.2551 )
 input_pickable = false
 collision_layer = 1
@@ -274,6 +299,7 @@ max_lines_visible = -1
 
 [node name="player" type="KinematicBody2D" parent="world" index="2"]
 
+editor/display_folded = true
 position = Vector2( 512, 300 )
 input_pickable = false
 collision_layer = 1
@@ -364,7 +390,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/rotate_anim = SubResource( 5 )
+anims/rotate_anim = SubResource( 2 )
 blend_times = [  ]
 
 [node name="Position2D" type="Position2D" parent="world/player" index="9"]
@@ -384,6 +410,26 @@ texture_mode = 922760448
 sharp_limit = 2.0
 round_precision = 8
 
+[node name="trading_crate" type="KinematicBody2D" parent="world" index="4"]
+
+position = Vector2( 512, 400 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 11 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="world/trading_crate" index="0"]
+
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/trading_crate" index="1"]
+
+position = Vector2( -0.323677, 0.158207 )
+scale = Vector2( 2.15092, 2.13713 )
+shape = SubResource( 3 )
+
 [node name="UI" type="CanvasLayer" parent="." index="2"]
 
 layer = 1
@@ -396,7 +442,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 editor/display_folded = true
 position = Vector2( 0, 565 )
-script = ExtResource( 11 )
+script = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="0" type="Node2D" parent="UI/toolbar" index="0"]
@@ -408,14 +454,14 @@ position = Vector2( 35, 0 )
 
 modulate = Color( 1, 1, 1, 0.745098 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 12 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="label" type="Sprite" parent="UI/toolbar/0" index="1"]
 
 position = Vector2( -10, -18 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 13 )
+texture = ExtResource( 15 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tool" type="Sprite" parent="UI/toolbar/0" index="2"]
@@ -435,14 +481,14 @@ position = Vector2( 95, 0 )
 
 modulate = Color( 1, 1, 1, 0.745098 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="label" type="Sprite" parent="UI/toolbar/1" index="1"]
 
 position = Vector2( -10, -18 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 15 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tool" type="Sprite" parent="UI/toolbar/1" index="2"]
@@ -461,14 +507,14 @@ _sections_unfolded = [ "Transform" ]
 
 modulate = Color( 1, 1, 1, 0.745098 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="label" type="Sprite" parent="UI/toolbar/2" index="1"]
 
 position = Vector2( -10, -18 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 16 )
+texture = ExtResource( 18 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tool" type="Sprite" parent="UI/toolbar/2" index="2"]
@@ -487,14 +533,14 @@ _sections_unfolded = [ "Transform" ]
 
 modulate = Color( 1, 1, 1, 0.745098 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="label" type="Sprite" parent="UI/toolbar/3" index="1"]
 
 position = Vector2( -10, -18 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 17 )
+texture = ExtResource( 19 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tool" type="Sprite" parent="UI/toolbar/3" index="2"]
@@ -513,14 +559,14 @@ _sections_unfolded = [ "Transform" ]
 
 modulate = Color( 1, 1, 1, 0.745098 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="label" type="Sprite" parent="UI/toolbar/4" index="1"]
 
 position = Vector2( -10, -18 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 18 )
+texture = ExtResource( 20 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tool" type="Sprite" parent="UI/toolbar/4" index="2"]
@@ -539,14 +585,14 @@ _sections_unfolded = [ "Transform" ]
 
 modulate = Color( 1, 1, 1, 0.745098 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="label" type="Sprite" parent="UI/toolbar/5" index="1"]
 
 position = Vector2( -10, -18 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 19 )
+texture = ExtResource( 21 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tool" type="Sprite" parent="UI/toolbar/5" index="2"]
@@ -565,14 +611,14 @@ _sections_unfolded = [ "Transform" ]
 
 modulate = Color( 1, 1, 1, 0.745098 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="label" type="Sprite" parent="UI/toolbar/6" index="1"]
 
 position = Vector2( -10, -18 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 20 )
+texture = ExtResource( 22 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tool" type="Sprite" parent="UI/toolbar/6" index="2"]
@@ -591,14 +637,14 @@ _sections_unfolded = [ "Transform" ]
 
 modulate = Color( 1, 1, 1, 0.745098 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="label" type="Sprite" parent="UI/toolbar/7" index="1"]
 
 position = Vector2( -10, -18 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 21 )
+texture = ExtResource( 23 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tool" type="Sprite" parent="UI/toolbar/7" index="2"]
@@ -617,14 +663,14 @@ _sections_unfolded = [ "Transform" ]
 
 modulate = Color( 1, 1, 1, 0.745098 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="label" type="Sprite" parent="UI/toolbar/8" index="1"]
 
 position = Vector2( -10, -18 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tool" type="Sprite" parent="UI/toolbar/8" index="2"]
@@ -643,14 +689,14 @@ _sections_unfolded = [ "Transform" ]
 
 modulate = Color( 1, 1, 1, 0.745098 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="label" type="Sprite" parent="UI/toolbar/9" index="1"]
 
 position = Vector2( -10, -18 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 23 )
+texture = ExtResource( 25 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tool" type="Sprite" parent="UI/toolbar/9" index="2"]
@@ -675,7 +721,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "V 0.1.0"
 align = 2
@@ -710,7 +756,7 @@ value = 100.0
 exp_edit = false
 rounded = false
 percent_visible = false
-script = ExtResource( 24 )
+script = ExtResource( 26 )
 _sections_unfolded = [ "Margin", "Percent" ]
 
 [node name="mass_display" type="Label" parent="UI" index="3"]
@@ -729,13 +775,421 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "Mass : 150kg"
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 26 )
+script = ExtResource( 28 )
 _sections_unfolded = [ "Margin", "custom_fonts" ]
+
+[node name="money_display" type="Label" parent="UI" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 12.0
+margin_top = 85.0
+margin_right = 200.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+text = "Money : 0$"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 29 )
+_sections_unfolded = [ "Margin", "custom_fonts" ]
+
+[node name="trading_panel" type="PanelContainer" parent="UI" index="5"]
+
+visible = false
+modulate = Color( 1, 1, 1, 0.745098 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 30.0
+margin_right = -30.0
+margin_bottom = -30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Anchor", "Margin", "Visibility" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/trading_panel" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 958.0
+margin_bottom = 533.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/trading_panel/VBoxContainer" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 951.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Label" type="Label" parent="UI/trading_panel/VBoxContainer/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 927.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 7 )
+text = "TRADE PANEL"
+align = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
+
+[node name="close_trade" type="Button" parent="UI/trading_panel/VBoxContainer/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 931.0
+margin_right = 951.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "X"
+flat = false
+align = 1
+script = ExtResource( 31 )
+
+[node name="Label" type="Label" parent="UI/trading_panel/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 28.0
+margin_right = 951.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HSplitContainer" type="HSplitContainer" parent="UI/trading_panel/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 46.0
+margin_right = 951.0
+margin_bottom = 526.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+split_offset = 452
+collapsed = false
+dragger_visibility = 0
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Visibility" ]
+
+[node name="GridContainer" type="GridContainer" parent="UI/trading_panel/VBoxContainer/HSplitContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 521.0
+margin_bottom = 480.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 2
+
+[node name="ore_label" type="Label" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 258.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "ore"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="ore_sell" type="Button" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 262.0
+margin_right = 520.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "+10$"
+flat = false
+align = 1
+script = ExtResource( 32 )
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="GridContainer2" type="GridContainer" parent="UI/trading_panel/VBoxContainer/HSplitContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 533.0
+margin_right = 951.0
+margin_bottom = 480.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 2
+
+[node name="hp" type="Label" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 207.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "5 H.P."
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="hp_buy" type="Button" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 211.0
+margin_right = 418.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-10$"
+flat = false
+align = 1
+script = ExtResource( 33 )
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="inertial_stabilizer" type="Label" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 27.0
+margin_right = 207.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "inertial stabilizer"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="inertial_stabilizer_buy" type="Button" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 211.0
+margin_top = 24.0
+margin_right = 418.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-100$"
+flat = false
+align = 1
+script = ExtResource( 34 )
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="drill" type="Label" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 51.0
+margin_right = 207.0
+margin_bottom = 65.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "drill"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="drill_buy" type="Button" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 211.0
+margin_top = 48.0
+margin_right = 418.0
+margin_bottom = 68.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-200$"
+flat = false
+align = 1
+script = ExtResource( 35 )
+_sections_unfolded = [ "Size Flags" ]
+
+[connection signal="pressed" from="UI/trading_panel/VBoxContainer/HBoxContainer/close_trade" to="UI/trading_panel/VBoxContainer/HBoxContainer/close_trade" method="_on_pressed"]
+
+[connection signal="draw" from="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer/ore_sell" to="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer/ore_sell" method="_on_draw"]
+
+[connection signal="pressed" from="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer/ore_sell" to="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer/ore_sell" method="_on_pressed"]
+
+[connection signal="draw" from="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/hp_buy" to="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/hp_buy" method="_on_draw"]
+
+[connection signal="pressed" from="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/hp_buy" to="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/hp_buy" method="_on_pressed"]
+
+[connection signal="draw" from="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/inertial_stabilizer_buy" to="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/inertial_stabilizer_buy" method="_on_draw"]
+
+[connection signal="draw" from="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/drill_buy" to="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/drill_buy" method="_on_draw"]
 
 
