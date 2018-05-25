@@ -1,16 +1,22 @@
 extends KinematicBody2D
 
+signal use_loop_end
+
 var life = 100
 var max_life = 100
 var ore = 0
-var last_dig = 0
 var money = 0
 
 func _ready():
 	set_process(true)
+	self.get_node('right_hand/tool').connect('use_loop_end', self, '_use_tool')
 
 func get_mass():
 	return 150 + self.ore
+
+func _use_tool():
+	self.ore += 1
+	get_node('../../topcamera').way += Vector2(cos(self.rotation + PI / 2), sin(self.rotation + PI / 2)) * 0.5
 
 func _process(delta):
 	
@@ -31,11 +37,7 @@ func _process(delta):
 		var cast = space_state.intersect_ray(self.position, self.position + see * 35)
 		if (cast):
 			if (cast.collider.type == 'meteor'):
-				if (OS.get_ticks_msec() - self.last_dig > 1000):
-					self.get_node('right_tool/rotate_anim').play('rotate_anim')
-					self.ore += 1
-					self.last_dig = OS.get_ticks_msec()
-					get_node('../../topcamera').way += Vector2(cos(self.rotation + PI / 2), sin(self.rotation + PI / 2)) * 0.5
+				self.get_node('right_hand/tool').emit_signal('use_loop_start')
 			elif (cast.collider.type == 'trading_crate'):
 				get_node('../../UI/trading_panel').show()
 	

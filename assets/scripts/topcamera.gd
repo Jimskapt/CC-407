@@ -7,49 +7,19 @@ var way = Vector2(0, 0)
 var moment = 0
 var size = {
 	'x': {
-		'min': -4000,
-		'max': 4000
+		'min': -2000,
+		'max': 2000
 	},
 	'y': {
-		'min': -4000,
-		'max': 4000
+		'min': -2000,
+		'max': 20000
 	}
 }
 
 func _ready():
 	set_process(true)
-	
 	get_node('../world/background').rect_position = Vector2(size.x.min, size.y.min)
 	get_node('../world/background').rect_size = Vector2(size.x.max - size.x.min, size.y.max - size.y.min)
-	
-	for i in range(1, 10):
-		var clone1 = get_node('../world/meteors/meteor1_0').duplicate()
-		clone1.name = 'meteor1_' + str(i)
-		randomize()
-		clone1.global_position = Vector2(
-			rand_range(size.x.min, size.x.max),
-			rand_range(size.y.min, size.y.max)
-		)
-		
-		var clone2 = get_node('../world/meteors/meteor2_0').duplicate()
-		clone2.name = 'meteor2_' + str(i)
-		randomize()
-		clone2.global_position = Vector2(
-			rand_range(size.x.min, size.x.max),
-			rand_range(size.y.min, size.y.max)
-		)
-		
-		var clone3 = get_node('../world/meteors/meteor3_0').duplicate()
-		clone3.name = 'meteor3_' + str(i)
-		randomize()
-		clone3.global_position = Vector2(
-			rand_range(size.x.min, size.x.max),
-			rand_range(size.y.min, size.y.max)
-		)
-		
-		get_node('../world/meteors').add_child(clone1)
-		get_node('../world/meteors').add_child(clone2)
-		get_node('../world/meteors').add_child(clone3)
 
 func _process(delta):
 	if (Input.is_action_pressed('ui_right') && !Input.is_action_pressed('ui_left')):

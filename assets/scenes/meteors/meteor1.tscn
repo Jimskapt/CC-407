@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/scripts/meteor1.gd" type="Script" id=1]
+[ext_resource path="res://assets/textures/kenney_spaceshooter/PNG/Meteors/meteorBrown_big1.png" type="Texture" id=2]
+
+[node name="meteor1" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Collision", "Linear", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 22.9487, -39.6652, -32.6613, -39.6652, -49.3443, 9.98659, -21.5393, 40.5721, 10.635, 28.2585, 33.2762, 32.2306, 49.1648, -0.738197 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="name" type="Label" parent="." index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -50.0
+margin_top = -37.0
+margin_right = 50.0
+margin_bottom = 33.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "meteor1"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
