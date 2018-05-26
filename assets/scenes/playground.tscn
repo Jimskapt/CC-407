@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://assets/scripts/playground.gd" type="Script" id=1]
 [ext_resource path="res://assets/scripts/topcamera.gd" type="Script" id=2]
@@ -33,12 +33,12 @@
 [ext_resource path="res://assets/scripts/inertial_stabilizer_buy.gd" type="Script" id=31]
 [ext_resource path="res://assets/scripts/drill_buy.gd" type="Script" id=32]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=5]
 
 custom_solver_bias = 0.0
 radius = 23.0805
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -55,7 +55,7 @@ use_filter = false
 font_data = SubResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=7]
 
 size = 16
 use_mipmaps = false
@@ -63,20 +63,13 @@ use_filter = false
 font_data = ExtResource( 24 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=8]
 
 size = 16
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 27 )
 _sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="Curve2D" id=7]
-
-bake_interval = 5.0
-_data = {
-"points": PoolVector2Array(  )
-}
 
 [node name="playground" type="Node2D" index="0"]
 
@@ -157,7 +150,7 @@ __meta__ = {
 
 visible = false
 position = Vector2( -0.263519, -1.84464 )
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 
 [node name="left_push" type="Sprite" parent="world/player" index="2"]
 
@@ -246,10 +239,11 @@ texture = ExtResource( 8 )
 
 position = Vector2( -0.323677, 0.158207 )
 scale = Vector2( 2.15092, 2.13713 )
-shape = SubResource( 2 )
+shape = SubResource( 6 )
 
 [node name="UI" type="CanvasLayer" parent="." index="2"]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -611,7 +605,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "Mass"
 percent_visible = 1.0
 lines_skipped = 0
@@ -633,7 +627,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "<player/mass>lb"
 align = 2
 valign = 1
@@ -659,7 +653,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "Money"
 percent_visible = 1.0
 lines_skipped = 0
@@ -682,7 +676,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "<player/money>$"
 align = 2
 valign = 1
@@ -761,7 +755,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 8 )
 text = "TRADE PANEL"
 align = 1
 uppercase = true
@@ -1064,11 +1058,6 @@ flat = false
 align = 1
 script = ExtResource( 32 )
 _sections_unfolded = [ "Size Flags", "custom_fonts" ]
-
-[node name="Path2D" type="Path2D" parent="." index="3"]
-
-curve = SubResource( 7 )
-_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 
 [connection signal="pressed" from="UI/trading_panel/VBoxContainer/HBoxContainer/close_trade" to="UI/trading_panel/VBoxContainer/HBoxContainer/close_trade" method="_on_pressed"]
 

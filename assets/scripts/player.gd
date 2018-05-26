@@ -14,9 +14,19 @@ func _ready():
 func get_mass():
 	return 150 + self.ore
 
-func _use_tool():
+func _use_tool(target):
 	self.ore += 1
+	var particles = load('res://assets/scenes/MiningParticles.tscn').instance()
+	particles.position = self.position + get_node('right_hand').position
+	get_node('../').add_child(particles)
+	particles.emitting = true
 	get_node('../../topcamera').way += Vector2(cos(self.rotation + PI / 2), sin(self.rotation + PI / 2)) * 0.5
+	
+	# cleaning old particles :
+	for itm in get_node('../').get_children():
+		if itm.is_class('Particles2D'):
+			if !itm.emitting:
+				itm.free()
 
 func _process(delta):
 	
@@ -37,7 +47,7 @@ func _process(delta):
 		var cast = space_state.intersect_ray(self.position, self.position + see * 35)
 		if (cast):
 			if (cast.collider.type == 'meteor'):
-				self.get_node('right_hand/tool').emit_signal('use_loop_start')
+				self.get_node('right_hand/tool').emit_signal('use_loop_start', cast.collider)
 			elif (cast.collider.type == 'trading_crate'):
 				get_node('../../UI/trading_panel').show()
 	
