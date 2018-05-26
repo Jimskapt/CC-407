@@ -1,6 +1,8 @@
 extends Node2D
 
 func _ready():
+	get_node('UI/game_version').text = ProjectSettings.get_setting('application/config/Version')
+	
 	var size = {
 		'x': {
 			'min': -2000,

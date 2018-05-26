@@ -49,13 +49,13 @@ font_path = "res://assets/fonts/kenney_fonts/Fonts/Kenney Pixel Square.ttf"
 
 [sub_resource type="DynamicFont" id=4]
 
-size = 14
+size = 10
 use_mipmaps = false
 use_filter = false
 font_data = SubResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 
 size = 16
 use_mipmaps = false
@@ -63,7 +63,7 @@ use_filter = false
 font_data = ExtResource( 24 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 
 size = 16
 use_mipmaps = false
@@ -117,10 +117,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -1986.0
-margin_top = -2000.0
-margin_right = 2014.0
-margin_bottom = 2000.0
+margin_left = -1984.0
+margin_top = -2004.0
+margin_right = 2016.0
+margin_bottom = 1996.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -250,7 +250,6 @@ shape = SubResource( 2 )
 
 [node name="UI" type="CanvasLayer" parent="." index="2"]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -532,7 +531,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 945.0
 margin_top = 570.0
-margin_right = 1020.0
+margin_right = 1019.0
 margin_bottom = 600.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -542,9 +541,10 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "V 0.1.0"
+text = "<ProjectSettings/Application/Config/Version>"
 align = 2
 valign = 1
+clip_text = true
 uppercase = true
 percent_visible = 1.0
 lines_skipped = 0
@@ -576,59 +576,124 @@ exp_edit = false
 rounded = false
 percent_visible = false
 script = ExtResource( 23 )
-_sections_unfolded = [ "Margin", "Percent" ]
+_sections_unfolded = [ "Margin", "Percent", "custom_fonts" ]
 
-[node name="mass_display" type="Label" parent="UI" index="3"]
+[node name="metrics" type="GridContainer" parent="UI" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 12.0
+margin_left = 10.0
 margin_top = 60.0
-margin_right = 200.0
-margin_bottom = 90.0
+margin_right = 195.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 2
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="mass_label" type="Label" parent="UI/metrics" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 52.0
+margin_bottom = 20.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
-text = "Mass : 150kg"
+custom_fonts/font = SubResource( 6 )
+text = "Mass"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="mass_display" type="Label" parent="UI/metrics" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 56.0
+margin_right = 185.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+text = "<player/mass>lb"
+align = 2
 valign = 1
+clip_text = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 25 )
-_sections_unfolded = [ "Margin", "custom_fonts" ]
+_sections_unfolded = [ "Margin", "Size Flags", "custom_fonts" ]
 
-[node name="money_display" type="Label" parent="UI" index="4"]
+[node name="money_label" type="Label" parent="UI/metrics" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 12.0
-margin_top = 85.0
-margin_right = 200.0
-margin_bottom = 100.0
+margin_top = 24.0
+margin_right = 52.0
+margin_bottom = 44.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
-text = "Money : 0$"
+custom_fonts/font = SubResource( 6 )
+text = "Money"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="money_display" type="Label" parent="UI/metrics" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 56.0
+margin_top = 24.0
+margin_right = 185.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+text = "<player/money>$"
+align = 2
 valign = 1
+clip_text = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 26 )
-_sections_unfolded = [ "Margin", "custom_fonts" ]
+_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "custom_fonts" ]
 
-[node name="trading_panel" type="PanelContainer" parent="UI" index="5"]
+[node name="trading_panel" type="PanelContainer" parent="UI" index="4"]
 
 visible = false
 modulate = Color( 1, 1, 1, 0.745098 )
@@ -668,7 +733,6 @@ alignment = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/trading_panel/VBoxContainer" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -697,7 +761,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 text = "TRADE PANEL"
 align = 1
 uppercase = true
@@ -731,7 +795,7 @@ flat = false
 align = 1
 script = ExtResource( 28 )
 
-[node name="Label" type="Label" parent="UI/trading_panel/VBoxContainer" index="1"]
+[node name="header_space" type="Label" parent="UI/trading_panel/VBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -770,13 +834,13 @@ collapsed = false
 dragger_visibility = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Visibility" ]
 
-[node name="GridContainer" type="GridContainer" parent="UI/trading_panel/VBoxContainer/HSplitContainer" index="0"]
+[node name="sell_grid" type="GridContainer" parent="UI/trading_panel/VBoxContainer/HSplitContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 521.0
+margin_right = 531.0
 margin_bottom = 480.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -786,37 +850,37 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 columns = 2
 
-[node name="ore_label" type="Label" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer" index="0"]
+[node name="ore_label" type="Label" parent="UI/trading_panel/VBoxContainer/HSplitContainer/sell_grid" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 3.0
-margin_right = 258.0
-margin_bottom = 17.0
+margin_right = 263.0
+margin_bottom = 19.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
 text = "ore"
-align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
-[node name="ore_sell" type="Button" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer" index="1"]
+[node name="ore_sell" type="Button" parent="UI/trading_panel/VBoxContainer/HSplitContainer/sell_grid" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 262.0
-margin_right = 520.0
-margin_bottom = 20.0
+margin_left = 267.0
+margin_right = 530.0
+margin_bottom = 22.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -824,23 +888,24 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "+10$"
+text = "+ XXX $"
 flat = false
 align = 1
 script = ExtResource( 29 )
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
-[node name="GridContainer2" type="GridContainer" parent="UI/trading_panel/VBoxContainer/HSplitContainer" index="1"]
+[node name="buy_grid" type="GridContainer" parent="UI/trading_panel/VBoxContainer/HSplitContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 533.0
+margin_left = 543.0
 margin_right = 951.0
 margin_bottom = 480.0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -851,37 +916,37 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 columns = 2
 
-[node name="hp" type="Label" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2" index="0"]
+[node name="hp" type="Label" parent="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 3.0
-margin_right = 207.0
-margin_bottom = 17.0
+margin_right = 202.0
+margin_bottom = 19.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
 text = "5 H.P."
-align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
-[node name="hp_buy" type="Button" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2" index="1"]
+[node name="hp_buy" type="Button" parent="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 211.0
-margin_right = 418.0
-margin_bottom = 20.0
+margin_left = 206.0
+margin_right = 408.0
+margin_bottom = 22.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -889,48 +954,49 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "-10$"
+text = "- XXX $"
 flat = false
 align = 1
 script = ExtResource( 30 )
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
-[node name="inertial_stabilizer" type="Label" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2" index="2"]
+[node name="inertial_stabilizer" type="Label" parent="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 27.0
-margin_right = 207.0
-margin_bottom = 41.0
+margin_top = 29.0
+margin_right = 202.0
+margin_bottom = 45.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
 text = "inertial stabilizer"
-align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
-[node name="inertial_stabilizer_buy" type="Button" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2" index="3"]
+[node name="inertial_stabilizer_buy" type="Button" parent="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 211.0
-margin_top = 24.0
-margin_right = 418.0
-margin_bottom = 44.0
+margin_left = 206.0
+margin_top = 26.0
+margin_right = 408.0
+margin_bottom = 48.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -938,48 +1004,49 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "-100$"
+text = "- XXX $"
 flat = false
 align = 1
 script = ExtResource( 31 )
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
-[node name="drill" type="Label" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2" index="4"]
+[node name="drill" type="Label" parent="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 51.0
-margin_right = 207.0
-margin_bottom = 65.0
+margin_top = 55.0
+margin_right = 202.0
+margin_bottom = 71.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
 text = "drill"
-align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
-[node name="drill_buy" type="Button" parent="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2" index="5"]
+[node name="drill_buy" type="Button" parent="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 211.0
-margin_top = 48.0
-margin_right = 418.0
-margin_bottom = 68.0
+margin_left = 206.0
+margin_top = 52.0
+margin_right = 408.0
+margin_bottom = 74.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -987,15 +1054,16 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "-200$"
+text = "- XXX $"
 flat = false
 align = 1
 script = ExtResource( 32 )
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
 
 [node name="Path2D" type="Path2D" parent="." index="3"]
 
@@ -1004,16 +1072,16 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 
 [connection signal="pressed" from="UI/trading_panel/VBoxContainer/HBoxContainer/close_trade" to="UI/trading_panel/VBoxContainer/HBoxContainer/close_trade" method="_on_pressed"]
 
-[connection signal="draw" from="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer/ore_sell" to="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer/ore_sell" method="_on_draw"]
+[connection signal="draw" from="UI/trading_panel/VBoxContainer/HSplitContainer/sell_grid/ore_sell" to="UI/trading_panel/VBoxContainer/HSplitContainer/sell_grid/ore_sell" method="_on_draw"]
 
-[connection signal="pressed" from="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer/ore_sell" to="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer/ore_sell" method="_on_pressed"]
+[connection signal="pressed" from="UI/trading_panel/VBoxContainer/HSplitContainer/sell_grid/ore_sell" to="UI/trading_panel/VBoxContainer/HSplitContainer/sell_grid/ore_sell" method="_on_pressed"]
 
-[connection signal="draw" from="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/hp_buy" to="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/hp_buy" method="_on_draw"]
+[connection signal="draw" from="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid/hp_buy" to="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid/hp_buy" method="_on_draw"]
 
-[connection signal="pressed" from="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/hp_buy" to="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/hp_buy" method="_on_pressed"]
+[connection signal="pressed" from="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid/hp_buy" to="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid/hp_buy" method="_on_pressed"]
 
-[connection signal="draw" from="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/inertial_stabilizer_buy" to="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/inertial_stabilizer_buy" method="_on_draw"]
+[connection signal="draw" from="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid/inertial_stabilizer_buy" to="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid/inertial_stabilizer_buy" method="_on_draw"]
 
-[connection signal="draw" from="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/drill_buy" to="UI/trading_panel/VBoxContainer/HSplitContainer/GridContainer2/drill_buy" method="_on_draw"]
+[connection signal="draw" from="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid/drill_buy" to="UI/trading_panel/VBoxContainer/HSplitContainer/buy_grid/drill_buy" method="_on_draw"]
 
 
